@@ -1,0 +1,47 @@
+<head>
+  <title>Charity Finder</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,600"></link>
+  <meta charset="utf-8">
+</head>
+<body>
+  {{> app}}
+</body>
+<template name="app">
+  <div class="container">
+    <input type="text" placeholder="Interest type"></input>
+    <button>Add Interest</button>
+    {{> list}}
+  </div>
+</template>
+<template name="list">
+  <div class="checkbox">
+    <label>
+      <input type="checkbox" value="">
+      Dolphins
+    </label>
+  </div>
+  <div class="checkbox">
+    <label>
+      <input type="checkbox" value="">
+      Children
+    </label>
+  </div>
+  <div class="checkbox">
+    <label>
+      <input type="checkbox" value="">
+      Much Charity
+    </label>
+  </div>
+  <div class="checkbox">
+    <label>
+      <input type="checkbox" value="">
+      Many Karma
+    </label>
+  </div>
+  <div class="checkbox">
+    <label>
+      <input type="checkbox" value="">
+      wow
+    </label>
+  </div>
+</template>
