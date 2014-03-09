@@ -5,43 +5,49 @@
 </head>
 <body>
   {{> app}}
+  {{> list}}
 </body>
 <template name="app">
   <div class="container">
     <input type="text" placeholder="Interest type"></input>
     <button>Add Interest</button>
-    {{> list}}
+    
+    
   </div>
 </template>
 <template name="list">
-  <div class="checkbox">
-    <label>
-      <input type="checkbox" value="">
-      Dolphins
-    </label>
+  <div class="container">
+    <div class="checkbox">
+      <label>
+        <input type="checkbox" value="DolphinBox" name="interest">
+        Dolphins
+      </label>
+    </div>
+    <div class="checkbox">
+      <label>
+        <input type="checkbox" value="ChildrenBox" name="interest">
+        Children
+      </label>
+    </div>
+    <div class="checkbox">
+      <label>
+        <input type="checkbox" value="CharityBox" name="interest">
+        Much Charity
+      </label>
+    </div>
+    <div class="checkbox">
+      <label>
+        <input type="checkbox" value="KarmaBox" name="interest">
+        Many Karma
+      </label>
+    </div>
+    <div class="checkbox">
+      <label>
+        <input type="checkbox" value="WowBox" name="interest">
+        wow
+      </label>
+    </div>
+    <button>Get Spam</button>
   </div>
-  <div class="checkbox">
-    <label>
-      <input type="checkbox" value="">
-      Children
-    </label>
-  </div>
-  <div class="checkbox">
-    <label>
-      <input type="checkbox" value="">
-      Much Charity
-    </label>
-  </div>
-  <div class="checkbox">
-    <label>
-      <input type="checkbox" value="">
-      Many Karma
-    </label>
-  </div>
-  <div class="checkbox">
-    <label>
-      <input type="checkbox" value="">
-      wow
-    </label>
-  </div>
+  
 </template>
