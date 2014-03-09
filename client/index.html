@@ -1,101 +1,197 @@
-<head>
-  <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-  <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+   <script src="bootstrap.min.js"></script>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="bootstrap.min.css">
 
-  <!-- Optional theme -->
-  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
-  <title>Charity Finder</title>
-  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,600"></link>
-  <meta charset="utf-8">
-  <style>
-  body { 
-    padding-top: 65px; 
-  }
-  </style>
-</head>
-<body>
-  {{> loginButtons}}
-  {{> list}}
-</body>
-<template name="app">
-  <div class="container">
-    <input type="text" placeholder="Interest type"></input>
-    <button>Add Interest</button>
-    
-    
+<!-- Optional theme -->
+<link rel="stylesheet" href="bootstrap-theme.min.css">
+
+
+<div class="navbar navbar-default" style="background-color: blue;" >
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="#">Brand</a>
   </div>
-</template>
-<template name="list">
-  <div class="container">
-    <div class="checkbox">
-      <label>
-        <input type="checkbox" value="DolphinBox" name="interest">
-        Dolphins
-      </label>
-    </div>
-    <div class="checkbox">
-      <label>
-        <input type="checkbox" value="ChildrenBox" name="interest">
-        Children
-      </label>
-    </div>
-    <div class="checkbox">
-      <label>
-        <input type="checkbox" value="CharityBox" name="interest">
-        Much Charity
-      </label>
-    </div>
-    <div class="checkbox">
-      <label>
-        <input type="checkbox" value="KarmaBox" name="interest">
-        Many Karma
-      </label>
-    </div>
-    <div class="checkbox">
-      <label>
-        <input type="checkbox" value="WowBox" name="interest">
-        wow
-      </label>
-    </div>
-    <button>Get Spam</button>
-  </div>
-  
-</template>
-<template name="loginButtons">
-  <div class="navbar navbar-fixed-top">
-  <div class="navbar-inner">
-  <div class="container">
-    
-  <div class="nav-collapse">
-  <ul class="nav">
-    <li class="{{active '/poo'}}">
-        <a href="/poo">Home</a>
-    </li>
-    <li class="divider"></li>
-    <li class="{{active '/selections'}}">
-        <a href="/selections">Selections</a>
-    </li>
-    <li class="divider"></li>
-    <li class="{{active '/charities'}}">
-        <a href="/charities">View Charities</a>
-    </li>
-  </ul>
-  <ul class="nav pull-right">
-    <li class="dropdown" id="menuLogin">
-        <a class="dropdown-toggle" href="#" data-toggle="dropdown" id="navLogin">Sign In <strong class="caret"></strong></a>
-        <div class="dropdown-menu" style="padding: 15px; padding-bottom: 0px;">
-            <form class="form" id="formLogin"> 
-                <input name="username" id="username" type="text" placeholder="Username"> 
-                <input name="password" id="password" type="password" placeholder="Password"><br>
-                <button type="button" id="btnLogin" class="btn">Login</button>
-              </form>
-          </div>
-          
-    </li>
-  </ul>
+  <div class="navbar-collapse collapse navbar-responsive-collapse">
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Active</a></li>
+      <li><a href="#">Link</a></li>
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Action</a></li>
+          <li><a href="#">Another action</a></li>
+          <li><a href="#">Something else here</a></li>
+          <li class="divider"></li>
+          <li class="dropdown-header">Dropdown header</li>
+          <li><a href="#">Separated link</a></li>
+          <li><a href="#">One more separated link</a></li>
+        </ul>
+      </li>
+    </ul>
+    <form class="navbar-form navbar-left">
+      <input type="text" class="form-control col-lg-8" placeholder="Search">
+    </form>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="#">Link</a></li>
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Action</a></li>
+          <li><a href="#">Another action</a></li>
+          <li><a href="#">Something else here</a></li>
+          <li class="divider"></li>
+          <li><a href="#">Separated link</a></li>
+        </ul>
+      </li>
+    </ul>
   </div>
 </div>
-</div>
-</div>  
-</template>
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand nav-link" href="#top">Acme Corp</a>
+        </div> <!-- /.navbar-header -->
+
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#faqs" class="nav-link">FAQs</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+          </ul>
+        </div> <!-- /.navbar-collapse -->
+      </div> <!-- /.container -->
+    </nav> <!-- /.navbar -->
+
+    <div id="top" class="jumbotron">
+      <div class="container">
+      
+        <h1>The fox jumps over the lazy dog</h1>
+        <div class="container-alternate">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div id="tour" class="carousel slide">
+              <ol class="carousel-indicators">
+              
+                <li data-target="#tour" data-slide-to="0" class="active"></li>
+                <li data-target="#tour" data-slide-to="1"></li>
+                <li data-target="#tour" data-slide-to="2"></li>
+                <li data-target="#tour" data-slide-to="3"></li>
+                <li data-target="#tour" data-slide-to="4"></li>
+                <p><a class="btn btn-primary btn-lg">Sign Up Today <span class="glyphicon glyphicon-circle-arrow-right"></span></a></p>
+              </ol>
+
+              <div class="carousel-inner">
+                <div class="item active">
+                  <img src="img/stock1.jpg">
+                  <div class="carousel-caption">
+                  
+                  </div>
+                </div>
+                <div class="item">
+                  <img src="img/stock2.jpg">
+                  <div class="carousel-caption">
+               
+                  </div>
+                </div>
+                <div class="item">
+                  <img src="img/stock3.jpg">
+                  <div class="carousel-caption">
+
+                  </div>
+                </div>
+                <div class="item">
+                  <img src="img/stock4.jpg">
+                  <div class="carousel-caption">
+
+                  </div>
+                </div>
+                <div class="item">
+                  <img src="img/stock5.jpg">
+                  <div class="carousel-caption">
+
+                  </div>
+                </div>
+              </div>
+
+              <a class="left carousel-control" href="#tour" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+              </a>
+              <a class="right carousel-control" href="#tour" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+              </a>
+            </div> <!-- #tour -->
+          </div> <!-- /.col-md-12 -->
+        </div> <!-- /.row -->
+      </div> <!-- /.container -->
+    </div> <!-- /.container-alternate -->
+        <h2>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy</h2>
+        
+      </div> <!-- /.container -->
+    </div> <!-- /.jumbotron -->
+
+    
+
+   
+    <div class="container-alternate">
+      <div class="container">
+        <h3 id="about" class="subhead">About Us</h3>
+        <div class="row about">
+          <div class="col-md-10 col-md-offset-1 text-center">
+            <p>
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+              nonummy nibh euismod tincidunt ut laoreet dolore magna.  Ut wisi
+              enim ad minim veniam, quis nostrud exerci tation ullamcorper
+              suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis
+              autem vel eum iriure dolor in hendrerit in vulputate velit esse
+              molestie consequat, vel illum dolore eu feugiat nulla facilisis at
+              vero eros et accumsan.
+            </p>
+            <p>
+              Nam liber tempor cum soluta nobis eleifend option congue nihil
+              imperdiet doming id quod mazim placerat facer possim assum. Typi non
+              habent claritatem insitam; est usus legentis in iis qui facit eorum
+              claritatem. Investigationes demonstraverunt lectores legere me lius
+              quod ii legunt saepius.
+            </p>
+          </div> <!-- /.col-md-10 -->
+        </div> <!-- /.row -->
+      </div> <!-- /.container -->
+    </div> <!-- /.container-alternate -->
+
+    <footer>
+      <div class="container clearfix">
+        <p class="pull-left">
+          Copyright &copy; StellaFellas Inc. 2014
+        </p>
+      </div> <!-- /.container -->
+    </footer>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+      $(".nav-link").click(function(e) {
+        e.preventDefault();
+        var link = $(this);
+        var href = link.attr("href");
+        $("html,body").animate({scrollTop: $(href).offset().top - 80}, 500);
+        link.closest(".navbar").find(".navbar-toggle:not(.collapsed)").click();
+      });
+    </script>
+  </body>
+</html>
